@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Copyright 2015 Friedemann Zenke
+# Plots end of ras file from command line using gnuplot.
+# Example usage:
+# pras.sh outputfile.ras
+# 
+# Accepts a second file too e.g.:
+# pras.sh excitatory.0.ras inhibitory.0.ras
+
 NSPIKES=20000
 
 if [ "$1" != "" ]; then

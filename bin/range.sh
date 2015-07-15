@@ -1,5 +1,22 @@
 #!/bin/bash
 
+# Copyright 2015 Friedemann Zenke
+# 
+# Returns the specified time interval from an Auryn ASCII output file 
+# containing a time series. 
+# Usage:
+# range.sh <start_time_seconds> <end_time_seconds> < foobar.ras
+# or 
+# range.sh <start_time_seconds> <end_time_seconds> foobar.ras
+# In this case the result will be cached and a later query will 
+# be sped up. 
+# 
+# **Note** If you often need to read specific time windows from
+# ras files consider using Auryn's BinarySpikeMonitor instead which
+# writes spikes to a bineary format from which time windows can be
+# extracted efficiently without having to scan the file (text) file
+# linearly.
+
 if [ "$1" != "" ]; then
 	START=$1
 else
