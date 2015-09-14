@@ -15,7 +15,7 @@ else
 fi
 
 if [[ $FILE =~ \.bras$ ]]; then
-	EXTBIN="aube --last 10 --inputs "
+	EXTBIN="aube --last 20 --inputs "
 else
 	EXTBIN="peep.sh"
 fi
